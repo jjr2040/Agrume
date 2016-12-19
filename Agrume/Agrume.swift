@@ -277,6 +277,10 @@ public final class Agrume: UIViewController {
 	}
 
   // MARK: Rotation
+  
+  public override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    return [.portrait,.landscapeRight,.landscapeLeft]
+  }
 
   @objc private func orientationDidChange() {
     let orientation = currentDeviceOrientation()
